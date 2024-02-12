@@ -11,15 +11,14 @@ import Mappings from "./features/SidebarComponents/Mappings";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Error401 from "./features/Errors/Error401";
 import ProtectedRoute from "./features/Auth/ProtectedRoute";
-import HomePage from "./features/SidebarComponents/HomePage";
 import DataIngest from "./features/SidebarComponents/dataIngest/DataIngest";
 import './assets/css/index.css';
+import React from "react";
 
 function HomeLayout() {
   return (
     <AzureAD provider={authProvider} forceLogin={false} forceLogout={true}>
       {({ login, logout, authenticationState, error, accountInfo }) => {
-        //console.log(accountInfo)
         localStorage.setItem("userName", accountInfo?.account.name);
         localStorage.setItem(
           "userRoles",
