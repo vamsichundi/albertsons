@@ -1,13 +1,19 @@
-import React, { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import React from "react";
 import "../../features/Main/Main.css";
+import { Card } from "react-bootstrap";
 
 const HomePage = () => {
   return (
     <div>
-      <h1 className="mt-5 text-center">
-        Welcome to the Customer 360 Data Flow Framework
-      </h1>
+       <div className="container">
+        <div className="container main-card">
+          <Card className="card-content shadow home-div">
+              <Card.Body>
+                  <div>Welcome to the Customer 360 Data Flow Framework</div>
+              </Card.Body>
+          </Card>
+        </div>
+        </div>
     </div>
   );
 };

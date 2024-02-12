@@ -10,36 +10,16 @@ import { Card } from "react-bootstrap";
 import Experiments from "../../features/SidebarComponents/Experiments";
 import Mappings from "../../features/SidebarComponents/Mappings";
 import DataIngest from "../../features/SidebarComponents/dataIngest/DataIngest";
-
-export const BackToHome = () => {
-  const navigate = useNavigate();
-  const clickHandler = () => {
-    navigate("/");
-  };
-  return (
-    <div>
-      <div className="mb-2 backhome-btn" onClick={clickHandler}>
-        {"<"} Back to Home Page
-      </div>
-      <hr className=" mt-0" />
-    </div>
-  );
-};
+import HomePage from "../SidebarComponents/HomePage";
 
 const Main = () => {
   return (
     <>
-      <div className="container">
-        <div className=" container main-card">
-          <Card className="card-content shadow">
-            <Card.Body>
-              <Routes>
+               <Routes>
                 <Route
                   path=""
                   element={
-                    <h1 className=" text-center">
-                      Welcome to the Customer 360 Data Flow Framework
-                    </h1>
+                    <HomePage />
                   }
                 />
                 <Route
@@ -92,10 +72,7 @@ const Main = () => {
                 />
                 <Route path="/unauthorized" element={<Error401 />} />
               </Routes>
-            </Card.Body>
-          </Card>
-        </div>
-      </div>
+      
     </>
   );
 };

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import "../../features/Main/Main.css";
 import { BackToHome } from "../../features/Main/Main";
+import ComponentWrapper from "../../components/ComponentWrapper";
 
 const Analysis = () => {
   const [show, setShow] = useState(false);
@@ -17,7 +18,7 @@ const Analysis = () => {
   };
   return (
     <div>
-      <BackToHome />
+      <ComponentWrapper>
       <div className="container">
         <div className="mx-3">
           Note*:{" "}
@@ -51,6 +52,8 @@ const Analysis = () => {
           </Modal>
         </div>
       </div>
+      </ComponentWrapper>
+      
     </div>
   );
 };

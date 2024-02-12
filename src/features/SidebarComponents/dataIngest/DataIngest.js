@@ -1,6 +1,6 @@
 import React from "react";
-import { BackToHome } from "../../../features/Main/Main";
 import { Row, Col, Card } from "react-bootstrap";
+import BackToHome from "../../../components/BackToHome";
 
 const DataIngest = () => {
   const dataArray = [

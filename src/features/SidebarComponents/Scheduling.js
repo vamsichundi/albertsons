@@ -1,11 +1,12 @@
 import React from "react";
-import { BackToHome } from "../../features/Main/Main";
+import ComponentWrapper from "../../components/ComponentWrapper";
 
 const Scheduling = () => {
   return (
     <div className="container">
-      <BackToHome />
-      <h1 className="text-center">Scheduling</h1>
+      <ComponentWrapper>
+        <h1 className="text-center">Scheduling</h1>
+      </ComponentWrapper>
     </div>
   );
 };

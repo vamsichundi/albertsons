@@ -2,10 +2,12 @@ import React from "react";
 import { Navbar, NavDropdown } from "react-bootstrap";
 import "./Nav.css";
 import albert from '../../assets/images/albert.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = ({ logout }) => {
   const userName = localStorage.getItem("userName").split(" ");
-  const name = "Welcome " + userName[0];
+  const name =  userName[0];
   return (
     <div>
       <Navbar
@@ -15,6 +17,7 @@ const Nav = ({ logout }) => {
           <img className="brand-logo" src={albert} alt="" />
         </Navbar.Brand>
         <>
+          
           <NavDropdown className="text-dark drop-down nav-drop-down" title={name}>
             <NavDropdown.Item onClick={logout}>Logout</NavDropdown.Item>
           </NavDropdown>

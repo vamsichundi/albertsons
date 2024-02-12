@@ -1,11 +1,11 @@
 import React from "react";
-import { BackToHome } from "../../features/Main/Main";
-
+import ComponentWrapper from "../../components/ComponentWrapper";
 const Experiments = () => {
   return (
     <div>
-      <BackToHome />
-      Experiments
+      <ComponentWrapper>
+        Experiments
+      </ComponentWrapper>
     </div>
   );
 };

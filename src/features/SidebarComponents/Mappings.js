@@ -2,11 +2,12 @@ import React from "react";
 import { Card, Col, Container, Form, Row } from "react-bootstrap";
 import { BackToHome } from "../../features/Main/Main";
 import "./Options.css";
+import ComponentWrapper from "../../components/ComponentWrapper";
 
 const Mappings = () => {
   return (
     <div>
-      <BackToHome />
+      <ComponentWrapper>
       <p className="form-title">Component Config</p>
       <p className="form-title">Placement Detials</p>
       <hr />
@@ -114,6 +115,7 @@ const Mappings = () => {
           </div>
         </Col>
       </Row> */}
+        </ComponentWrapper>
     </div>
   );
 };

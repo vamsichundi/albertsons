@@ -1,11 +1,12 @@
 import React from "react";
-import { BackToHome } from "../../features/Main/Main";
+import ComponentWrapper from "../../components/ComponentWrapper";
 
 const Configuration = () => {
   return (
     <div className="container">
-      <BackToHome />
-      <h1 className="mt-5 text-center">Configure Processor</h1>
+      <ComponentWrapper>
+        <h1 className="mt-5 text-center">Configure Processor</h1>
+      </ComponentWrapper>
     </div>
   );
 };

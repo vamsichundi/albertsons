@@ -1,26 +1,24 @@
-/* .main {
-  overflow-y: auto;
-  background-color: #e6e6e6;
-  width: 100vw;
-} */
 
 .main-card {
   background-color: #f6f8fb;
-  padding-top: 60px;
-  min-height: 100vh
+  padding-top: 10px;
+  min-height: 100vh;
+  margin-bottom: 20px;
 }
 
 .card-content {
-  margin-top: 50px;
+  margin-top: 25px;
   min-height: calc(100vh - 110px);
   border-color: #fff !important;
 }
 
 .backhome-btn {
   font-size: 12px;
-  font-weight: 800 !important;
+  font-weight: 600 !important;
   cursor: pointer;
-  color: #5d6166;
+  color: black;
+  font-family: 'inter' !important;
+  margin-top: 70px;
 }
 
 .backhome-btn:hover {
@@ -29,4 +27,8 @@
 
 .iframe {
   min-height: 80vh;
+}
+
+.home-div {
+  margin-top:90px;
 }
