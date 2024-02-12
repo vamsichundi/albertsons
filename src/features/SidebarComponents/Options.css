@@ -1,0 +1,15 @@
+.form-title {
+    font-size: 14px;
+    color: #6c6c6c;
+    font-weight: 600;
+}
+
+.input-label {
+    font-size: 12px;
+    background-color: #f6f8fb;
+    padding: 10px 5px;
+}
+
+.form-control {
+    box-shadow: none !important;
+}

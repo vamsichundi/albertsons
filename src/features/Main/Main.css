@@ -1,0 +1,32 @@
+/* .main {
+  overflow-y: auto;
+  background-color: #e6e6e6;
+  width: 100vw;
+} */
+
+.main-card {
+  background-color: #f6f8fb;
+  padding-top: 60px;
+  min-height: 100vh
+}
+
+.card-content {
+  margin-top: 50px;
+  min-height: calc(100vh - 110px);
+  border-color: #fff !important;
+}
+
+.backhome-btn {
+  font-size: 12px;
+  font-weight: 800 !important;
+  cursor: pointer;
+  color: #5d6166;
+}
+
+.backhome-btn:hover {
+  color: #0572f7;
+}
+
+.iframe {
+  min-height: 80vh;
+}

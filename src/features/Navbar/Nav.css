@@ -1,0 +1,58 @@
+.Navbar {
+  background-color: #fff;
+  position: fixed !important;
+  width: 100vw;
+  height: 60px;
+  z-index: 999;
+  font-family: sans-serif !important;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 23px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.nav-drop-down {
+  margin-right: 20px;
+}
+
+.sidebar {
+  width: 200px;
+  padding-top: 60px;
+  overflow-y: auto;
+  background-color: #0d1b2a;
+  color: #fff;
+}
+
+.sticky {
+  position: fixed;
+  padding: 0px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px !important;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-opt {
+  color: #ececec !important;
+  text-decoration-line: none;
+}
+
+li {
+  font-size: 13px;
+  cursor: pointer;
+  padding: 7px;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+li:hover {
+  background-color: #2d4054;
+  border: 1px solid #2F363D;
+  border-radius: 5px;
+}

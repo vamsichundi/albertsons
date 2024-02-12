@@ -1,0 +1,8 @@
+.content {
+    display: flex;
+    background-color: #f6f8fb;
+}
+
+.main-content {
+    width: 100vw;
+}
