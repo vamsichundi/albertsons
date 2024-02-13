@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Col, Container, Form, Row } from "react-bootstrap";
-import { BackToHome } from "../../features/Main/Main";
 import "./Options.css";
 import ComponentWrapper from "../../components/ComponentWrapper";
 

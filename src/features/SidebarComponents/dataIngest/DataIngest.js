@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Col, Card } from "react-bootstrap";
-import BackToHome from "../../../components/BackToHome";
+import { Accordion  } from "react-bootstrap";
+import ComponentWrapper from "../../../components/ComponentWrapper";
 
 const DataIngest = () => {
   const dataArray = [
@@ -42,35 +42,29 @@ const DataIngest = () => {
 
   return (
     <div>
-      <BackToHome />
-      <div className="container">
-        <h3 className="text-center mb-3">
-          <b>Data Ingest</b>
-        </h3>
-        {dataArray.map((data, index) => {
-          return (
-            <>
-              <Row key={index}>
-                <Col md={3}>
-                  <div className="form-title">{data.formTitle}</div>
-                </Col>
-                <Col md={6}>
-                  {data.formData.map((data, index) => {
-                    return (
-                      <Card key={index} className="mb-3 shadow-sm" role="button">
-                        <Card.Body>
-                          <div className="text-center">{data.title}</div>
-                        </Card.Body>
-                      </Card>
-                    );
-                  })}
-                </Col>
-              </Row>
-              <hr />
-            </>
-          );
-        })}
-      </div>
+      <ComponentWrapper>
+        <div className="container">
+                <h3 className="text-center mb-3">
+                  <b>Data Ingest</b>
+          </h3>
+          {dataArray.map((data, index) => {
+            return (
+              <Accordion key={index}>
+                <Accordion.Item>
+                                  <Accordion.Header>{data.formTitle}</Accordion.Header>
+                {data.formData.map((data, index) => {
+                  return (
+                    <Accordion.Body role="button">
+                      {data.title}
+                    </Accordion.Body>
+                      )
+                    })}
+                </Accordion.Item>
+                  </Accordion>
+                )
+              })}
+        </div>
+      </ComponentWrapper>
     </div>
   );
 };
