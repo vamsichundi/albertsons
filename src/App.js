@@ -1,19 +1,20 @@
+import React from "react";
 import "./App.css";
 import Login from "./features/Auth/Login";
 import Home from "./features/Home";
 import { authProvider } from "./auth/authprovider";
+import { getPath, isAuthorizedRoute } from "./routing/routes";
+import { RoutesUrl } from './routing/routesUrls';
 import { AzureAD, AuthenticationState } from "react-aad-msal";
 import Configuration from "./features/SidebarComponents/Configuration";
 import Scheduling from "./features/SidebarComponents/Scheduling";
 import Analysis from "./features/SidebarComponents/Analysis";
 import Experiments from "./features/SidebarComponents/Experiments";
 import Mappings from "./features/SidebarComponents/Mappings";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Error401 from "./features/Errors/Error401";
-import ProtectedRoute from "./features/Auth/ProtectedRoute";
 import DataIngest from "./features/SidebarComponents/dataIngest/DataIngest";
 import './assets/css/index.css';
-import React from "react";
 
 function HomeLayout() {
   return (
@@ -46,64 +47,23 @@ function App() {
             <Route
               path=""
               element={
-                <ProtectedRoute>
                   <Home />
-                </ProtectedRoute>
               }
             />
-            <Route
-              path="/Configuration"
-              element={
-                <ProtectedRoute>
-                  <Configuration />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/Scheduling"
-              element={
-                <ProtectedRoute>
-                  <Scheduling />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/Analysis"
-              element={
-                <ProtectedRoute>
-                  <Analysis />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/Create-experiments"
-              element={
-                <ProtectedRoute>
-                  <Experiments />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/Create-mappings"
-              element={
-                <ProtectedRoute>
-                  <Mappings />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/data-ingest"
-              element={
-                <ProtectedRoute>
-                  <DataIngest />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/unauthorized" element={<Error401 />} />
+            <Route path={getPath(RoutesUrl.CONFIGURATION)} element={isAuthorizedRoute(RoutesUrl.CONFIGURATION) ? <Configuration /> : <Navigate to="/" />} />
+            <Route path={getPath(RoutesUrl.CONFIGURATION)} element={isAuthorizedRoute(RoutesUrl.CONFIGURATION) ? <Configuration /> : <Navigate to="/" />} />
+            <Route path={getPath(RoutesUrl.SCHEDULING)} element={<Scheduling />} />
+            <Route path={getPath(RoutesUrl.ANALYSIS)} element= {<Analysis />} />
+            <Route path={getPath(RoutesUrl.CREATE_EXPERIMENTS)} element={<Experiments />} />
+            <Route path={getPath(RoutesUrl.CREATE_MAPPINGS)} element= {<Mappings />} />
+            <Route path={getPath(RoutesUrl.DATA_INGEST)} element= {<DataIngest />} />
+            <Route path={RoutesUrl.UNAUTHORIZED} element={<Error401 />} />
+            <Route path="*" element={<Navigate to="/" />}/>
           </Route>
         </Routes>
       </BrowserRouter>
     </div>
+
   );
 }
 export default App;

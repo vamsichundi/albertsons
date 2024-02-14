@@ -1,6 +1,8 @@
 import React from "react";
 import { Accordion  } from "react-bootstrap";
 import ComponentWrapper from "../../../components/ComponentWrapper";
+import "../Options.css";
+import { Card, Col, Container, Stack,Button, Row } from "react-bootstrap";
 
 const DataIngest = () => {
   const dataArray = [
@@ -44,25 +46,33 @@ const DataIngest = () => {
     <div>
       <ComponentWrapper>
         <div className="container">
-                <h3 className="text-center mb-3">
-                  <b>Data Ingest</b>
-          </h3>
+          <Row className="input-label my-3">
+            <Col md={12}>
+              <h6><b>Data Ingest</b></h6>
+            </Col>
+          </Row>
           {dataArray.map((data, index) => {
             return (
               <Accordion key={index}>
                 <Accordion.Item>
-                                  <Accordion.Header>{data.formTitle}</Accordion.Header>
-                {data.formData.map((data, index) => {
-                  return (
-                    <Accordion.Body role="button">
-                      {data.title}
-                    </Accordion.Body>
-                      )
-                    })}
+                  <Accordion.Header>{data.formTitle}</Accordion.Header>
+                  <Accordion.Body>
+                    <Container>
+                      <Row>
+                        {data.formData.map((data, index) => {
+                          return (
+                          <Col md="auto" key={data.title}>
+                              <Button variant="outline-secondary" className="my-4">{data.title}</Button>
+                          </Col>
+                          )
+                        })}
+                      </Row>
+                    </Container>
+                  </Accordion.Body>
                 </Accordion.Item>
-                  </Accordion>
-                )
-              })}
+              </Accordion>
+              )
+            })}
         </div>
       </ComponentWrapper>
     </div>
@@ -70,3 +80,4 @@ const DataIngest = () => {
 };
 
 export default DataIngest;
+

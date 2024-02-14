@@ -5,7 +5,7 @@ const Scheduling = () => {
   return (
     <div className="container">
       <ComponentWrapper>
-        <h1 className="text-center">Scheduling</h1>
+        <div className="mt-5 text-center">Scheduling </div>
       </ComponentWrapper>
     </div>
   );

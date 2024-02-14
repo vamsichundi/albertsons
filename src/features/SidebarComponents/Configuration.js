@@ -5,7 +5,7 @@ const Configuration = () => {
   return (
     <div className="container">
       <ComponentWrapper>
-        <h1 className="mt-5 text-center">Configure Processor</h1>
+        <div className="mt-5 text-center">Configure Processor</div>
       </ComponentWrapper>
     </div>
   );

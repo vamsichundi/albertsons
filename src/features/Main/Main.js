@@ -3,77 +3,28 @@ import "./Main.css";
 import Configuration from "../../features/SidebarComponents/Configuration";
 import Scheduling from "../../features/SidebarComponents/Scheduling";
 import Analysis from "../../features/SidebarComponents/Analysis";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Error401 from "../Errors/Error401";
-import ProtectedRoute from "../Auth/ProtectedRoute";
-import { Card } from "react-bootstrap";
+import { getPath, isAuthorizedRoute } from "../../routing/routes";
 import Experiments from "../../features/SidebarComponents/Experiments";
 import Mappings from "../../features/SidebarComponents/Mappings";
 import DataIngest from "../../features/SidebarComponents/dataIngest/DataIngest";
 import HomePage from "../SidebarComponents/HomePage";
+import { RoutesUrl } from '../../routing/routesUrls';
 
 const Main = () => {
   return (
-    <>
-               <Routes>
-                <Route
-                  path=""
-                  element={
-                    <HomePage />
-                  }
-                />
-                <Route
-                  path="/Configuration"
-                  element={
-                    <ProtectedRoute>
-                      <Configuration />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/Scheduling"
-                  element={
-                    <ProtectedRoute>
-                      <Scheduling />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/Analysis"
-                  element={
-                    <ProtectedRoute>
-                      <Analysis />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/Create-experiments"
-                  element={
-                    <ProtectedRoute>
-                      <Experiments />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/Create-mappings"
-                  element={
-                    <ProtectedRoute>
-                      <Mappings />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/data-ingest"
-                  element={
-                    <ProtectedRoute>
-                      <DataIngest/>
-                    </ProtectedRoute>
-                  }
-                />
-                <Route path="/unauthorized" element={<Error401 />} />
-              </Routes>
-      
-    </>
+      <Routes>
+        <Route path="" element={<HomePage />} /> 
+        <Route path={getPath(RoutesUrl.CONFIGURATION)} element={isAuthorizedRoute(RoutesUrl.CONFIGURATION) ? <Configuration /> : <Navigate to="/" />} />
+        <Route path={getPath(RoutesUrl.SCHEDULING)} element={<Scheduling />} />
+        <Route path={getPath(RoutesUrl.ANALYSIS)} element= {<Analysis />} />
+        <Route path={getPath(RoutesUrl.CREATE_EXPERIMENTS)} element={<Experiments />} />
+        <Route path={getPath(RoutesUrl.CREATE_MAPPINGS)} element= {<Mappings />} />
+        <Route path={getPath(RoutesUrl.DATA_INGEST)} element= {<DataIngest />} />
+        <Route path={RoutesUrl.UNAUTHORIZED} element={<Error401 />} />
+        <Route path="*" element={<Navigate to="/" />}/>
+      </Routes>
   );
 };
 

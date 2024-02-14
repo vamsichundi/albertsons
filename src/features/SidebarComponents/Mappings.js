@@ -37,7 +37,7 @@ const Mappings = () => {
           <Col md={3}>
             <div>
               <Form.Select className="form-control">
-                <option value="">Select Componet Page</option>
+                <option value="">Select Component Page</option>
               </Form.Select>
             </div>
           </Col>

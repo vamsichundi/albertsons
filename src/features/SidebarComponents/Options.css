@@ -6,10 +6,17 @@
 
 .input-label {
     font-size: 12px;
-    background-color: #f6f8fb;
+    background-color: #03A1E3;
+    color: white;
     padding: 10px 5px;
 }
 
 .form-control {
     box-shadow: none !important;
+}
+.accordion-item {
+    margin: 10px 0px !important;
+}
+.accordion-header {
+    background-color: #dcdcdc !important;
 }
