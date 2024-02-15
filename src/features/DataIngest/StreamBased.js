@@ -6,7 +6,7 @@ const StreamBased = () => {
   return (
     <div className="container">
       <ComponentWrapper>
-        <div className="mt-5 text-center">Configure Processor</div>
+        <div className="mt-5 text-center">StreamBased  Processor</div>
       </ComponentWrapper>
     </div>
   );

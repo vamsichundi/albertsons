@@ -5,44 +5,43 @@ import "./DataIngest.css";
 import { Col, Container, Button, Row } from "react-bootstrap";
 import { useNavigate  } from "react-router-dom";
 import { RoutesUrl } from "../../routing/routesUrls";
-import SQLBased from "./SQLBased";
-import StreamBased from "./StreamBased";
-import FileBased from "./FileBased";
+import { constants } from "../../constants/contants";
+
 
 const DataIngest = () => {
   let navigate = useNavigate();
   const dataArray = [
     {
-      formTitle: "Raw Ingest",
+      formTitle: constants.INGEST.RAW_INGEST,
       formData: [
         {
-          title: "Table-based Ingest",
-          path: "/",
+          title: constants.INGEST.TABLE_BASED,
+          path: RoutesUrl.TABLE_BASED,
         },
         {
-          title: "SQL-based Ingest",
-          path: "/",
+          title: constants.INGEST.SQL_BASED,
+          path: RoutesUrl.SQL_BASED,
         },
         {
-          title: "File-based Ingest",
-          path: "/",
+          title: constants.INGEST.FILE_BASED,
+          path: RoutesUrl.FILE_BASED,
         },
         {
-          title: "Stream-based Ingest",
-          path: "/",
+          title: constants.INGEST.STREAM_BASED,
+          path: RoutesUrl.STREAM_BASED,
         },
       ],
     },
     {
-      formTitle: "Conform Ingest",
+      formTitle: constants.INGEST.CONFORM_INGEST,
       formData: [
         {
-          title: "Conform-Processor Config",
-          path: "/",
+          title: constants.INGEST.CONFORM_INGEST,
+          path: RoutesUrl.CONFORM_CONFIG,
         },
         {
-          title: "Hybrid-Processor Config",
-          path: "/",
+          title: constants.INGEST.HYBRID_PROCESSOR_CONFIG,
+          path: RoutesUrl.HYBRID_CONFIG,
         },
       ],
     },
@@ -68,7 +67,7 @@ const DataIngest = () => {
                         {data.formData.map((data, index) => {
                           return (
                           <Col md="auto" key={data.title}>
-                              <Button variant="outline-secondary" onClick={() => navigate(RoutesUrl.TABLE_BASED)} className="my-4">{data.title}</Button>
+                              <Button variant="outline-secondary" onClick={() => navigate(data.path)} className="my-4">{data.title}</Button>
                           </Col>
                           )
                         })}

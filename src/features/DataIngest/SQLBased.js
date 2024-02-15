@@ -6,7 +6,7 @@ const SQLBased = () => {
   return (
     <div className="container">
       <ComponentWrapper>
-        <div className="mt-5 text-center">Configure Processor</div>
+        <div className="mt-5 text-center">SQLBased Ingest</div>
       </ComponentWrapper>
     </div>
   );

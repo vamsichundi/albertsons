@@ -15,6 +15,8 @@ import TableBased from "../DataIngest/TableBased";
 import SQLBased from "../DataIngest/SQLBased";
 import StreamBased from "../DataIngest/StreamBased";
 import FileBased from "../DataIngest/FileBased";
+import ConformIngest from "../DataIngest/ConformIngest";
+import HybridConfig from "../DataIngest/HybridConfig";
 
 const Main = () => {
   return (
@@ -29,8 +31,10 @@ const Main = () => {
         <Route path={getPath(RoutesUrl.INSIGHT)} element={<DataIngest />} />
         <Route path={getPath(RoutesUrl.TABLE_BASED)} element={<TableBased />} />
         <Route path={getPath(RoutesUrl.SQL_BASED)} element={<SQLBased />} />
-        <Route path={getPath(RoutesUrl.STREAM_BASED)} element={<StreamBased />} />
         <Route path={getPath(RoutesUrl.FILE_BASED)} element= {<FileBased />} />
+        <Route path={getPath(RoutesUrl.STREAM_BASED)} element={<StreamBased />} />
+        <Route path={getPath(RoutesUrl.CONFORM_CONFIG)} element={<ConformIngest />} />
+        <Route path={getPath(RoutesUrl.HYBRID_CONFIG)} element= {<HybridConfig />} />
         <Route path={RoutesUrl.UNAUTHORIZED} element={<Error401 />} />
         <Route path="*" element={<Navigate to="/" />}/>
       </Routes>
