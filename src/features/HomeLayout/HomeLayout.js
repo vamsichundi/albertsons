@@ -3,6 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import Main from "../Main/Main";
 import "./HomeLayout.css";
 import Nav from "../Navbar/Nav";
+import { Outlet  } from "react-router-dom";
 
 const HomeLayout = ({ logout, accountInfo }) => {
   return (

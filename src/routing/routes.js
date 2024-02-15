@@ -15,7 +15,7 @@ export const getRoutes = (accountInfo) => {
       routes.push({ name: menuconstants.ANALYSIS, route: RoutesUrl.ANALYSIS, icon: faChartLine });
       routes.push({ name: menuconstants.CREATE_EXPERIMENTS, route: RoutesUrl.CREATE_EXPERIMENTS, icon: faFlaskVial });
       routes.push({ name: menuconstants.CREATE_MAPPINGS, route: RoutesUrl.CREATE_MAPPINGS, icon: faSnowflake });
-      routes.push({ name: menuconstants.DATA_INGEST, route: RoutesUrl.DATA_INGEST, icon: faMoneyBillTransfer });
+      routes.push({ name: menuconstants.INSIGHT, route: RoutesUrl.INSIGHT, icon: faMoneyBillTransfer });
     }
   }
   return routes;
@@ -30,10 +30,17 @@ export const getAuthorizedRoutes = () => {
             routes.push(RoutesUrl.SCHEDULING);
         }
         if (userRoles.includes(roles.az_analyst) || userRoles.includes(roles.az_developer)) {
-            routes.push(RoutesUrl.ANALYSIS);
-            routes.push(RoutesUrl.CREATE_EXPERIMENTS);
-            routes.push(RoutesUrl.CREATE_MAPPINGS);
-            routes.push(RoutesUrl.DATA_INGEST);
+          routes.push(RoutesUrl.ANALYSIS);
+          routes.push(RoutesUrl.CREATE_EXPERIMENTS);
+          routes.push(RoutesUrl.CREATE_MAPPINGS);
+          routes.push(RoutesUrl.INSIGHT);
+          routes.push(RoutesUrl.TABLE_BASED);
+          routes.push(RoutesUrl.SQL_BASED);
+          routes.push(RoutesUrl.FILE_BASED);
+          routes.push(RoutesUrl.STREAM_BASED);
+          routes.push(RoutesUrl.FILE_BASED);
+          routes.push(RoutesUrl.CONFORM_CONFIG);
+          routes.push(RoutesUrl.HYBRID_CONFIG);
         }
     }
   return routes;

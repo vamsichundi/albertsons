@@ -3,8 +3,14 @@ import { Accordion  } from "react-bootstrap";
 import ComponentWrapper from "../../components/ComponentWrapper";
 import "./DataIngest.css";
 import { Col, Container, Button, Row } from "react-bootstrap";
+import { useNavigate  } from "react-router-dom";
+import { RoutesUrl } from "../../routing/routesUrls";
+import SQLBased from "./SQLBased";
+import StreamBased from "./StreamBased";
+import FileBased from "./FileBased";
 
 const DataIngest = () => {
+  let navigate = useNavigate();
   const dataArray = [
     {
       formTitle: "Raw Ingest",
@@ -62,7 +68,7 @@ const DataIngest = () => {
                         {data.formData.map((data, index) => {
                           return (
                           <Col md="auto" key={data.title}>
-                              <Button variant="outline-secondary" className="my-4">{data.title}</Button>
+                              <Button variant="outline-secondary" onClick={() => navigate(RoutesUrl.TABLE_BASED)} className="my-4">{data.title}</Button>
                           </Col>
                           )
                         })}

@@ -15,6 +15,10 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Error401 from "./features/Errors/Error401";
 import DataIngest from "./features/DataIngest/DataIngest";
 import './assets/css/index.css';
+import TableBased from "./features/DataIngest/TableBased";
+import SQLBased from "./features/DataIngest/SQLBased";
+import StreamBased from "./features/DataIngest/StreamBased";
+import FileBased from "./features/DataIngest/FileBased";
 
 function HomeLayout() {
   return (
@@ -55,7 +59,13 @@ function App() {
             <Route path={getPath(RoutesUrl.ANALYSIS)} element= {<Analysis />} />
             <Route path={getPath(RoutesUrl.CREATE_EXPERIMENTS)} element={<Experiments />} />
             <Route path={getPath(RoutesUrl.CREATE_MAPPINGS)} element= {<Mappings />} />
-            <Route path={getPath(RoutesUrl.DATA_INGEST)} element= {<DataIngest />} />
+            <Route path={getPath(RoutesUrl.INSIGHT)} element={<DataIngest />} />
+            <Route path={getPath(RoutesUrl.TABLE_BASED)} element={<TableBased />} />
+            <Route path={getPath(RoutesUrl.SQL_BASED)} element={<SQLBased />} />
+            <Route path={getPath(RoutesUrl.STREAM_BASED)} element={<StreamBased />} />
+            <Route path={getPath(RoutesUrl.FILE_BASED)} element= {<FileBased />} />
+            <Route path={getPath(RoutesUrl.CONFORM_CONFIG)} element={<TableBased />} />
+            <Route path={getPath(RoutesUrl.HYBRID_CONFIG)} element= {<TableBased />} />
             <Route path={RoutesUrl.UNAUTHORIZED} element={<Error401 />} />
             <Route path="*" element={<Navigate to="/" />}/>
           </Route>
