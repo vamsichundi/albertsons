@@ -2,8 +2,6 @@ import React from "react";
 import { Navbar, NavDropdown } from "react-bootstrap";
 import "./Nav.css";
 import albert from '../../assets/images/albert.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = ({ logout }) => {
   const userName = localStorage.getItem("userName").split(" ");

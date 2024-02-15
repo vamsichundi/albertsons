@@ -1,14 +1,15 @@
 import React from "react";
 import ComponentWrapper from "../../components/ComponentWrapper";
+import "./Experiments.css";
 
-const Scheduling = () => {
+const Experiments = () => {
   return (
-    <div className="container">
+    <div>
       <ComponentWrapper>
-        <div className="mt-5 text-center">Scheduling </div>
+        Experiments
       </ComponentWrapper>
     </div>
   );
 };
 
-export default Scheduling;
+export default Experiments;

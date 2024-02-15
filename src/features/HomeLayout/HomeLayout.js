@@ -1,10 +1,10 @@
 import React from "react";
-import Sidebar from "./Navbar/Sidebar";
-import Main from "./Main/Main";
-import "./Home.css";
-import Nav from "./Navbar/Nav";
+import Sidebar from "../Sidebar/Sidebar";
+import Main from "../Main/Main";
+import "./HomeLayout.css";
+import Nav from "../Navbar/Nav";
 
-const Home = ({ logout, accountInfo }) => {
+const HomeLayout = ({ logout, accountInfo }) => {
   return (
     <div>
       <Nav logout={logout} />
@@ -18,4 +18,4 @@ const Home = ({ logout, accountInfo }) => {
   );
 };
 
-export default Home;
+export default HomeLayout;

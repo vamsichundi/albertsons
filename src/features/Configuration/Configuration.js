@@ -1,5 +1,6 @@
 import React from "react";
 import ComponentWrapper from "../../components/ComponentWrapper";
+import "./Configuration.css";
 
 const Configuration = () => {
   return (

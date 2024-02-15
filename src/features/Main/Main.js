@@ -1,15 +1,15 @@
 import React from "react";
 import "./Main.css";
-import Configuration from "../../features/SidebarComponents/Configuration";
-import Scheduling from "../../features/SidebarComponents/Scheduling";
-import Analysis from "../../features/SidebarComponents/Analysis";
+import Configuration from "../Configuration/Configuration";
+import Scheduling from "../Scheduling/Scheduling";
+import Analysis from "../Analysis/Analysis";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Error401 from "../Errors/Error401";
 import { getPath, isAuthorizedRoute } from "../../routing/routes";
-import Experiments from "../../features/SidebarComponents/Experiments";
-import Mappings from "../../features/SidebarComponents/Mappings";
-import DataIngest from "../../features/SidebarComponents/dataIngest/DataIngest";
-import HomePage from "../SidebarComponents/HomePage";
+import Experiments from "../CreateExperiments/Experiments";
+import Mappings from "../CreateMappings/Mappings";
+import DataIngest from "../DataIngest/DataIngest";
+import HomePage from "../HomePage/HomePage";
 import { RoutesUrl } from '../../routing/routesUrls';
 
 const Main = () => {

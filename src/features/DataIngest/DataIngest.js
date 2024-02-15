@@ -1,8 +1,8 @@
 import React from "react";
 import { Accordion  } from "react-bootstrap";
-import ComponentWrapper from "../../../components/ComponentWrapper";
-import "../Options.css";
-import { Card, Col, Container, Stack,Button, Row } from "react-bootstrap";
+import ComponentWrapper from "../../components/ComponentWrapper";
+import "./DataIngest.css";
+import { Col, Container, Button, Row } from "react-bootstrap";
 
 const DataIngest = () => {
   const dataArray = [

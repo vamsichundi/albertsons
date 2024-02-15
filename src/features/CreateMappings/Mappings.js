@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Col, Container, Form, Row } from "react-bootstrap";
-import "./Options.css";
+import "./Mappings.css";
 import ComponentWrapper from "../../components/ComponentWrapper";
 
 const Mappings = () => {

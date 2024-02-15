@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import "../../features/Main/Main.css";
-import { BackToHome } from "../../features/Main/Main";
+import "./Analysis.css";
 import ComponentWrapper from "../../components/ComponentWrapper";
 
 const Analysis = () => {

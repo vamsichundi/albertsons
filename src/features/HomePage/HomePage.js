@@ -1,5 +1,5 @@
 import React from "react";
-import "../../features/Main/Main.css";
+import "./HomePage.css";
 import { Card } from "react-bootstrap";
 
 const HomePage = () => {

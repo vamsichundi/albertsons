@@ -1,19 +1,19 @@
 import React from "react";
 import "./App.css";
-import Login from "./features/Auth/Login";
-import Home from "./features/Home";
+import Login from "./features/Login/Login";
+import Home from "./features/HomeLayout/HomeLayout";
 import { authProvider } from "./auth/authprovider";
 import { getPath, isAuthorizedRoute } from "./routing/routes";
 import { RoutesUrl } from './routing/routesUrls';
 import { AzureAD, AuthenticationState } from "react-aad-msal";
-import Configuration from "./features/SidebarComponents/Configuration";
-import Scheduling from "./features/SidebarComponents/Scheduling";
-import Analysis from "./features/SidebarComponents/Analysis";
-import Experiments from "./features/SidebarComponents/Experiments";
-import Mappings from "./features/SidebarComponents/Mappings";
+import Configuration from "./features/Configuration/Configuration";
+import Scheduling from "./features/Scheduling/Scheduling";
+import Analysis from "./features/Analysis/Analysis";
+import Experiments from "./features/CreateExperiments/Experiments";
+import Mappings from "./features/CreateMappings/Mappings";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Error401 from "./features/Errors/Error401";
-import DataIngest from "./features/SidebarComponents/dataIngest/DataIngest";
+import DataIngest from "./features/DataIngest/DataIngest";
 import './assets/css/index.css';
 
 function HomeLayout() {
@@ -50,8 +50,7 @@ function App() {
                   <Home />
               }
             />
-            <Route path={getPath(RoutesUrl.CONFIGURATION)} element={isAuthorizedRoute(RoutesUrl.CONFIGURATION) ? <Configuration /> : <Navigate to="/" />} />
-            <Route path={getPath(RoutesUrl.CONFIGURATION)} element={isAuthorizedRoute(RoutesUrl.CONFIGURATION) ? <Configuration /> : <Navigate to="/" />} />
+            <Route path={getPath(RoutesUrl.CONFIGURATION)} element={isAuthorizedRoute(RoutesUrl.CONFIGURATION) ? <Configuration /> : <Navigate to={RoutesUrl.UNAUTHORIZED} />} />
             <Route path={getPath(RoutesUrl.SCHEDULING)} element={<Scheduling />} />
             <Route path={getPath(RoutesUrl.ANALYSIS)} element= {<Analysis />} />
             <Route path={getPath(RoutesUrl.CREATE_EXPERIMENTS)} element={<Experiments />} />

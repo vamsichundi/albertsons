@@ -1,0 +1,12 @@
+.input-label {
+    font-size: 12px;
+    background-color: #03A1E3;
+    color: white;
+    padding: 10px 5px;
+}
+.accordion-item {
+    margin: 10px 0px !important;
+}
+.accordion-header {
+    background-color: #dcdcdc !important;
+}
