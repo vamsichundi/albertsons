@@ -3,6 +3,7 @@ export const RoutesUrl = {
     SCHEDULING: "/Scheduling",
     CONFIGURATION: "/Configuration",
     ANALYSIS: "/Analysis",
+    DATABRICKS: "/Databricks",
     CREATE_EXPERIMENTS: "/create-experiments",
     CREATE_MAPPINGS: "/create-mappings",
     INSIGHT: "/insight",

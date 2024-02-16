@@ -53,7 +53,7 @@ const DataIngest = () => {
         <div className="container">
           <Row className="input-label my-3">
             <Col md={12}>
-              <h6><b>Data Ingest</b></h6>
+              <h6><b>{constants.INGEST.DATA_INGEST}</b></h6>
             </Col>
           </Row>
           {dataArray.map((data, index) => {

@@ -1,5 +1,5 @@
 import { RoutesUrl } from './routesUrls';
-import { faChartLine, faFlaskVial, faSnowflake, faMoneyBillTransfer, faGear, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faChartLine, faArrowDownUpAcrossLine, faDatabase, faSnowflake, faGear, faClock } from '@fortawesome/free-solid-svg-icons';
 import { roles } from '../constants/roles';
 import { menuconstants } from '../constants/menuconstants';
 
@@ -12,10 +12,10 @@ export const getRoutes = (accountInfo) => {
       routes.push({ name: menuconstants.SCHEDULING, route: RoutesUrl.SCHEDULING, icon:  faClock});
     }
     if (userRoles.includes(roles.az_analyst) || userRoles.includes(roles.az_developer)) {
+      routes.push({ name: menuconstants.DATA_INGEST, route: RoutesUrl.DATA_INGEST, icon: faArrowDownUpAcrossLine})
       routes.push({ name: menuconstants.ANALYSIS, route: RoutesUrl.ANALYSIS, icon: faChartLine });
-      routes.push({ name: menuconstants.CREATE_EXPERIMENTS, route: RoutesUrl.CREATE_EXPERIMENTS, icon: faFlaskVial });
-      routes.push({ name: menuconstants.CREATE_MAPPINGS, route: RoutesUrl.CREATE_MAPPINGS, icon: faSnowflake });
-      routes.push({ name: menuconstants.INSIGHT, route: RoutesUrl.INSIGHT, icon: faMoneyBillTransfer });
+      routes.push({ name: menuconstants.DATABRICKS, route: RoutesUrl.DATABRICKS, icon: faDatabase });
+      routes.push({ name: menuconstants.INSIGHT, route: RoutesUrl.INSIGHT, icon: faSnowflake });
     }
   }
   return routes;
@@ -41,6 +41,8 @@ export const getAuthorizedRoutes = () => {
           routes.push(RoutesUrl.FILE_BASED);
           routes.push(RoutesUrl.CONFORM_CONFIG);
           routes.push(RoutesUrl.HYBRID_CONFIG);
+          routes.push(RoutesUrl.DATA_INGEST);
+          routes.push(RoutesUrl.DATABRICKS);
         }
     }
   return routes;
