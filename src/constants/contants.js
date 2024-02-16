@@ -31,6 +31,11 @@ export const constants = {
         CONFIGURE_EXISTING_SQL: "Configure existing SQL to Row Data Layer",
         DATA_FILE_BASED: "Data Ingest - File-based Ingest",
         ADD_NEW_FILE: "Add New File to Raw Data Layer",
-        CONFIGURE_EXISTING_FILE: "Configure existing File to Raw Data Layer"
+        CONFIGURE_EXISTING_FILE: "Configure existing File to Raw Data Layer",
+        TABLE_BASED_NEW_TABLE: "Table-based Ingest - New Table",
+        GENERAL_CONFIGURATION: "General Configuration",
+        PROCESSOR_CONFIGURATION: "Processor Configuration",
+        CREATE_RAW_PROCESSOR: "Create New Raw Processor",
+        TABLE_NAME: "Table Name"
     },
 }   

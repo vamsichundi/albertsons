@@ -9,10 +9,13 @@ export const RoutesUrl = {
     INSIGHT: "/insight",
     DATA_INGEST: "/data-ingest",
     UNAUTHORIZED: "/unauthorized",
-    TABLE_BASED: "/insight/table-based",
-    SQL_BASED: "/insight/sql-based",
-    STREAM_BASED: "/insight/stream-based",
-    FILE_BASED: "/insight/file-based",
-    CONFORM_CONFIG: "/insight/conform-config",
-    HYBRID_CONFIG: "/insight/hybrid-config"
+    TABLE_BASED: "/data-ingest/table",
+    SQL_BASED: "/data-ingest/sql",
+    STREAM_BASED: "/data-ingest/stream",
+    FILE_BASED: "/data-ingest/file",
+    CONFORM_CONFIG: "/data-ingest/conform-config",
+    HYBRID_CONFIG: "/data-ingest/hybrid-config",
+    ADD_NEW_TABLE: "/data-ingest/table/add-table",
+    ADD_NEW_ATTRIBUTE: "/data-ingest/table/add-attribute",
+    CONFIGURE_EXISTING_TABLE: "/data-ingest/table/configure-table"
 }

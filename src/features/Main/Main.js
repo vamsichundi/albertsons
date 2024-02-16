@@ -17,6 +17,9 @@ import StreamBased from "../DataIngest/StreamBased";
 import FileBased from "../DataIngest/FileBased";
 import ConformIngest from "../DataIngest/ConformIngest";
 import HybridConfig from "../DataIngest/HybridConfig";
+import AddNewTable from "../DataIngest/AddNewTable";
+import AddNewAttribute from "../DataIngest/AddNewAttribute";
+import ConfigureExistingTable from "../DataIngest/ConfigureExistingTable";
 
 const Main = () => {
   return (
@@ -36,7 +39,10 @@ const Main = () => {
         <Route path={getPath(RoutesUrl.FILE_BASED)} element= {<FileBased />} />
         <Route path={getPath(RoutesUrl.STREAM_BASED)} element={<StreamBased />} />
         <Route path={getPath(RoutesUrl.CONFORM_CONFIG)} element={<ConformIngest />} />
-        <Route path={getPath(RoutesUrl.HYBRID_CONFIG)} element= {<HybridConfig />} />
+        <Route path={getPath(RoutesUrl.HYBRID_CONFIG)} element={<HybridConfig />} />
+        <Route path={getPath(RoutesUrl.ADD_NEW_TABLE)} element={<AddNewTable />} />
+        <Route path={getPath(RoutesUrl.ADD_NEW_ATTRIBUTE)} element={<AddNewAttribute />} />
+        <Route path={getPath(RoutesUrl.CONFIGURE_EXISTING_TABLE)} element={<ConfigureExistingTable />} />
         <Route path={RoutesUrl.UNAUTHORIZED} element={<Error401 />} />
         <Route path="*" element={<Navigate to="/" />}/>
       </Routes>

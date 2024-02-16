@@ -43,6 +43,9 @@ export const getAuthorizedRoutes = () => {
           routes.push(RoutesUrl.HYBRID_CONFIG);
           routes.push(RoutesUrl.DATA_INGEST);
           routes.push(RoutesUrl.DATABRICKS);
+          routes.push(RoutesUrl.ADD_NEW_TABLE);
+          routes.push(RoutesUrl.ADD_NEW_ATTRIBUTE);
+          routes.push(RoutesUrl.CONFIGURE_EXISTING_TABLE);
         }
     }
   return routes;

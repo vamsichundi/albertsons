@@ -16,11 +16,11 @@ const TableBased = () => {
       formData: [
         {
           title: constants.INGEST.ADD_NEW_TABLE,
-          path: RoutesUrl.TABLE_BASED,
+          path: RoutesUrl.ADD_NEW_TABLE,
         },
         {
           title: constants.INGEST.ADD_NEW_ATTRIBUTE,
-          path: RoutesUrl.SQL_BASED,
+          path: RoutesUrl.ADD_NEW_ATTRIBUTE,
         },
       ],
     },
@@ -29,7 +29,7 @@ const TableBased = () => {
       formData: [
         {
           title: constants.INGEST.CONFIGURE_EXISTING_TABLE,
-          path: RoutesUrl.CONFORM_CONFIG,
+          path: RoutesUrl.CONFIGURE_EXISTING_TABLE,
         },
       ],
     },

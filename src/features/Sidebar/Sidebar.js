@@ -18,6 +18,7 @@ const Sidebar = ({ accountInfo }) => {
           </li>
           {options.map((option) => (
             <li
+              className="menu-item"
               key={option.name}
               // style={liStyle}
               onClick={() => {
